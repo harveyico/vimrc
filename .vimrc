@@ -41,6 +41,9 @@ Plugin 'tpope/vim-endwise'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'tpope/vim-rails'
 
+" Cucumber
+Plugin 'veloce/vim-behat'
+
 " HTML / CSS / JS
 Plugin 'tpope/vim-haml'
 Plugin 'tpope/vim-markdown'

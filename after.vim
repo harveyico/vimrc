@@ -1,7 +1,10 @@
 color molokai
+let g:feature_filtype='behat'
+set fdm=manual
 set t_Co=256
-set wrap
+set nowrap
 set number
+set norelativenumber
 set mouse=ia
 set clipboard=unnamed
 
@@ -58,7 +61,7 @@ vmap <C-c>            :w !pbcopy<cr><cr>
 imap <C-x>            <Esc>:set paste<cr>:r !pbpaste<cr>:set nopaste<cr>
 nmap <C-x>            i<C-x>
 
-let CoVim_default_name = 'akosipc'
+let CoVim_default_name = 'godstriker'
 let CoVim_default_port = '63363'
 
 let g:ctrlp_custom_ignore = { 'dir':  '^/_site/|/deps/' }
