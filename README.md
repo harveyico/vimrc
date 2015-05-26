@@ -13,7 +13,7 @@ mkdir tmp tmp/undo tmp/swap tmp/backup
 ```
 
 Add vim in profile
-`echo export PATH="$PATH:$HOME/.rvm/bin"' >> ~/.profile`
+`echo 'export PATH="$PATH:$HOME/.rvm/bin"' >> ~/.profile`
 
 Install vundle
 `git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim`
