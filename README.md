@@ -7,7 +7,10 @@ Symlink vimrc:
 `ln -nfs ~/.vim/.vimrc ~/.vimrc`
 
 Make tmp folders:
-`mkdir tmp/undo tmp/swap tmp/backup`
+```
+cd ~/.vim
+mkdir tmp tmp/undo tmp/swap tmp/backup
+```
 
 Add vim in profile
 echo 'export PATH="$PATH:$HOME/.rvm/bin"' >> ~/.profile
