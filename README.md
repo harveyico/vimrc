@@ -3,8 +3,14 @@
 Clone vim:
 `git clone git@github.com:sanzo12/vimrc.git ~/.vim/`
 
-Symlink vimrc
+Symlink vimrc:
 `ln -nfs ~/.vim/.vimrc ~/.vimrc`
+
+Make tmp folders:
+`mkdir tmp/undo tmp/swap tmp/backup`
+
+Add vim in profile
+echo 'export PATH="$PATH:$HOME/.rvm/bin"' >> ~/.profile
 
 Install vundle
 `git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim`
