@@ -56,6 +56,7 @@ au BufRead,BufNewFile *.ejs     set filetype=html
 au BufRead,BufNewFile *.embled  set filetype=html
 au BufRead,BufNewFile *.eex     set filetype=html
 au BufRead,BufNewFile *.less    set filetype=scss
+au BufRead,BufNewFile *.coffee  set filetype=coffee
 
 vmap <C-c>            :w !pbcopy<cr><cr>
 imap <C-x>            <Esc>:set paste<cr>:r !pbpaste<cr>:set nopaste<cr>
