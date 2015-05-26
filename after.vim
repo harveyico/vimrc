@@ -61,6 +61,7 @@ au BufRead,BufNewFile *.coffee  set filetype=coffee
 vmap <C-c>            :w !pbcopy<cr><cr>
 imap <C-x>            <Esc>:set paste<cr>:r !pbpaste<cr>:set nopaste<cr>
 nmap <C-x>            i<C-x>
+map <Tab> :NERDTreeToggle <cr>
 
 let CoVim_default_name = 'godstriker'
 let CoVim_default_port = '63363'
