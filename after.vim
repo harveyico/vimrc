@@ -72,3 +72,6 @@ let g:ScreenImpl = 'Tmux'
 let g:ScreenShellTmuxInitArgs = '-2'
 let g:ScreenShellQuitOnVimExit = 1
 let g:ScreenShellWidth = 60
+
+let mapleader=","
+autocmd BufWritePre * :%s/\s\+$//e

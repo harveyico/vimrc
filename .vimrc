@@ -19,7 +19,6 @@ Plugin 'kien/ctrlp.vim'
 
 " Utility
 Plugin 'tpope/vim-surround'
-Plugin 'Townk/vim-autoclose'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'tpope/vim-repeat'
 Plugin 'vim-scripts/YankRing.vim'
@@ -52,6 +51,7 @@ Plugin 'lunaru/vim-less'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'alfredodeza/jacinto.vim'
 Plugin 'heartsentwined/vim-emblem'
+Plugin 'nono/vim-handlebars'
 
 " Elixir
 Plugin 'elixir-lang/vim-elixir'
@@ -60,7 +60,7 @@ Plugin 'elixir-lang/vim-elixir'
 Plugin 'gregsexton/gitv'
 Plugin 'tpope/vim-fugitive'
 
-call vundle#end()  
+call vundle#end()
 
 " ctrl-p
 let g:ctrlp_working_path_mode = ''
@@ -68,8 +68,8 @@ let g:ctrlp_working_path_mode = ''
 " vim-indent-object
 let g:indentobject_meaningful_indentition = ["haml", "sass", "yaml", "markdown"]
 
-" yankring 
-let g:yankring_history_dir = '~/.vim/tmp/'
+" yankring
+let g:yankring_history_dir = '~/.vim/tmp'
 let g:yankring_replace_n_pkey = '<leader>['
 let g:yankring_replace_n_nkey = '<leader>]'
 
@@ -94,6 +94,7 @@ vnoremap / /\v
 
 filetype plugin indent on
 syntax enable
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 set switchbuf=useopen
 
 set autoread
@@ -148,8 +149,6 @@ set completeopt=longest,menuone,preview
 set syntax=enable
 
 command! W :w
-
-autocmd BufWritePre * :%s/\s\+$//e
 
 au!
 au WinLeave * set nocursorline
