@@ -8,10 +8,8 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 " Color Schemes
+Plugin 'nielsmadan/harlequin'
 Plugin 'tomasr/molokai'
-Plugin 'zaiste/Atom'
-Plugin 'tpope/vim-vividchalk'
-Plugin 'whatyouhide/vim-gotham'
 
 " Files
 Plugin 'scrooloose/nerdtree'
@@ -52,6 +50,8 @@ Plugin 'kchmck/vim-coffee-script'
 Plugin 'alfredodeza/jacinto.vim'
 Plugin 'heartsentwined/vim-emblem'
 Plugin 'nono/vim-handlebars'
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
 
 " Elixir
 Plugin 'elixir-lang/vim-elixir'
@@ -61,6 +61,9 @@ Plugin 'gregsexton/gitv'
 Plugin 'tpope/vim-fugitive'
 
 call vundle#end()
+
+" Groovy
+Plugin 'vim-scripts/groovy.vim'
 
 " ctrl-p
 let g:ctrlp_working_path_mode = ''
@@ -94,7 +97,7 @@ vnoremap / /\v
 
 filetype plugin indent on
 syntax enable
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/*
 set switchbuf=useopen
 
 set autoread
