@@ -1,0 +1,17 @@
+import Query from 'javascripts/common/query'
+import gql from 'graphql-tag'
+
+export default {
+  extends: Query,
+  queryString: gql`
+    {
+      user {
+        id
+      }
+    }
+  `,
+  placeholderData: {
+    user: {
+    }
+  }
+}
