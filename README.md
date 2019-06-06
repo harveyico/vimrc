@@ -1,7 +1,7 @@
 ## Installation
 
 Clone vim:
-`git clone git@github.com:sanzo12/vimrc.git ~/.vim/`
+`git clone git@github.com:harveyico/vimrc.git ~/.vim/`
 
 Symlink vimrc:
 `ln -nfs ~/.vim/.vimrc ~/.vimrc`
