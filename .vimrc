@@ -71,6 +71,7 @@ Plugin 'nono/vim-handlebars'
 Plugin 'pangloss/vim-javascript'
 "Plugin 'mxw/vim-jsx'
 Plugin 'maxmellon/vim-jsx-pretty'
+Plugin 'jparise/vim-graphql'
 
 " Vue
 Plugin 'harveyico/vim-vue'

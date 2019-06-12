@@ -19,6 +19,7 @@ ino kk                <esc>
 nn vue                :0r ~/.vim/vue/template.txt<CR>
 nn vuem                :0r ~/.vim/vue/mutate.txt<CR>
 nn vueq                :0r ~/.vim/vue/query.txt<CR>
+nn react              :0r ~/.vim/react/component.js<CR>
 nn <tab>              <c-w>w
 nn <leader>a          ggVG
 nn <leader>y          yy
