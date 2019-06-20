@@ -1,0 +1,14 @@
+import gql from 'graphql-tag'
+
+export default function ({ paramHere }) {
+  return {
+    mutation: gql`mutation ($paramHere: String!) {
+      methodHere (paramHere: $paramHere) {
+        valueHere {
+          id
+        }
+      }
+    }`,
+    variables: { paramHere }
+  }
+}
