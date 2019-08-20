@@ -1,5 +1,10 @@
+let mapleader=","
 color twilight256
 "let g:feature_filtype='behat'
+
+" Auto remove whitespace
+autocmd BufWritePre * :%s/\s\+$//e
+
 set fdm=manual
 set t_Co=256
 set nowrap
@@ -13,13 +18,14 @@ set ttyfast
 set lazyredraw
 
 syntax enable
-
+hi VertSplit ctermfg=Black ctermbg=DarkGray
 ino jj                <esc>
 ino kk                <esc>
 nn vue                :0r ~/.vim/vue/template.txt<CR>
 nn vuem                :0r ~/.vim/vue/mutate.txt<CR>
 nn vueq                :0r ~/.vim/vue/query.txt<CR>
 nn react              :0r ~/.vim/react/component.js<CR>
+nn spec               :ScreenShell clear && rspec ".@%"<CR>
 nn <tab>              <c-w>w
 nn <leader>a          ggVG
 nn <leader>y          yy
@@ -38,13 +44,10 @@ nn <leader>t          :tabnew<cr>
 nn <leader>tq         :tabclose<cr>
 nn <leader>yr         :YRShow<cr>
 nn <leader>st         :Scratch<cr>
-nn <leader>sr         :ScreenShellVertical<CR>
-nn <leader>run        :call ScreenShellSend("clear && rspec ".@%)<CR>
-nn <leader>ruc        :call ScreenSheelSend("clear && cucumber --format=pretty ".@%)<CR>
-nn <leader>bn         :call ScreenShellSend("clear && bundle install")<CR>
+nn <leader>sr         :ScreenShellVertical<cr>
+nn <leader>run        :call ScreenShellSend("clear && rspec " . @% . " --format=doc")<cr>
+nn <leader>bn         :call ScreenShellSend("clear && bundle install")<cr>
 nn <leader>sx         :ScreenQuit<CR>
-nn <leader>np         :set nopaste<CR>
-nn <leader>pp         :set paste<cr>
 
 nn <leader>"          I"<esc>Ea"<esc>
 nn <leader>'          I'<esc>Ea'<esc>
@@ -82,14 +85,10 @@ let CoVim_default_name = 'hyveria'
 let CoVim_default_port = '63363'
 
 "let g:ctrlp_custom_ignore = { 'dir':  '^/_site/|/deps/tmp/\|public/assets\|public/packs\|public/packs-test\|public/uploads\|public/system\' }
-
 let g:ScreenImpl = 'Tmux'
 let g:ScreenShellTmuxInitArgs = '-2'
 let g:ScreenShellQuitOnVimExit = 1
 let g:ScreenShellWidth = 60
-
-let mapleader=","
-autocmd BufWritePre * :%s/\s\+$//e
 
 let g:prettier#config#bracket_spacing = 'true'
 let g:prettier#config#jsx_bracket_same_line = 'false'
@@ -100,4 +99,3 @@ let NERDTreeIgnore=['\.DS_Store$', '\.git$', 'node_modules'] " ignore files in n
 if filereadable('.prettierrc')
   "autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue PrettierAsync
 endif
-
